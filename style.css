@@ -1,0 +1,152 @@
+/* UNIVERSAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ELEMENT SELCTOR */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #e6f8ed, #5befdb);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(26, 49, 50);
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: rgb(38, 71, 72);
+}
+
+/* CLASS SELECTOR */
+.desc {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* DESCENDANT SELECTOR */
+table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #2f5b56;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: whitesmoke;
+}
+
+#registration-form {
+    background: white;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#registration-form h2 {
+    color: #2f5b56;
+    margin-bottom: 14px;
+}
+
+#form-group {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin-top: 4px;
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+/* ATTRIBUTE SELECTOR */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+input[required] {
+    border-left: 4px solid #34dbd5;
+}
+
+/* PSEUDO-CLASS SELECTOR */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid #298;
+    box-shadow: 0 0 4px rgba(38, 123, 179, 0.5);
+}
+
+button {
+    padding: 10px 14px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #f0f3f3;
+}
+
+button[type="submit"] {
+    background: green;
+}
+
+button[type="submit"]:hover {
+    background: #219150;
+}
+
+button[type="reset"] {
+    background: red;
+}
+
+button[type="reset"]:hover {
+    background: #f84444;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 3fr;
+    }
+}
